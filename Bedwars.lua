@@ -1,7 +1,7 @@
 
 -- main
  local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
- local Window = Library.CreateLib("RBXHacks", "Synapse")
+ local Window = Library.CreateLib("SyxHacks", "Synapse")
 
 local K = Window:NewTab("Kits")
 local KSection = K:NewSection("Kit")
