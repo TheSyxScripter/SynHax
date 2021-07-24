@@ -5,7 +5,7 @@
 local K = Window:NewTab("Kits")
 local KSection = K:NewSection("Kit")
  KSection:NewDropdown("Kits", "Choose Any Kit", {"baker", "barbarian", "builder","archer","shielder","melody","davey","farmer_cletus"}, function(v)
-    local args = {
+    local args = 
     [1] = {
         ["kit"] = v
     }
@@ -41,7 +41,7 @@ local PlayerSection = Player:NewSection("Player")
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
     end)
  PlayerSection:NewSlider("JumpPower", "Changes the jump power", 1000, 50, function(v)
-game.Players.LocalPlayers.Character.Humanoid.JumpPower = v
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
 PlayerSection:NewButton("Instant Break", "Breaks blocks instantly", function()
 while wait() do
