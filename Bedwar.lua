@@ -42,7 +42,7 @@ local PlayerSection = Player:NewSection("Player")
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
     end)
  PlayerSection:NewSlider("JumpPower", "Changes the jump power", 1000, 50, function(v)
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+game.Players.LocalPlayers.Character.Humanoid.JumpPower = v
     end)
 PlayerSection:NewButton("Instant Break", "Breaks blocks instantly", function()
 while wait() do
