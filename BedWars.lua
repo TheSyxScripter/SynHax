@@ -5,11 +5,13 @@
 local K = Window:NewTab("Kits")
 local KSection = K:NewSection("Kit")
  KSection:NewDropdown("Kits", "Choose Any Kit", {"baker", "barbarian", "builder","archer","shielder","melody","davey","farmer_cletus"}, function(v)
-    local args = 
+local args = {
     [1] = {
         ["kit"] = v
     }
 }
+
+game:GetService("ReplicatedStorage").rbxts_include.node_modules.net.out._NetManaged.BedwarsActivateKit:InvokeServer(unpack(args))
 
 game:GetService("ReplicatedStorage").rbxts_include.node_modules.net.out._NetManaged.BedwarsActivateKit:InvokeServer(unpack(args))
 end)
