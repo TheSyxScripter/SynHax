@@ -1,6 +1,6 @@
 # RBXHaxs
 
-RBX <code>hacks</code> is a script hub Called <code>RBXHaxs</code>
+SYXN <code>hacks</code> is a script hub Called <code>SyxnHaxs</code>
   
   Idk what to put here anyways
 
