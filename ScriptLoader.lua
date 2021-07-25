@@ -48,22 +48,6 @@ end
 
 -- Functions:
 
-function CloseHub()
-	Main:TweenSize(UDim2.new(0, 592,0, 15), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.8, true)
-	Exit:TweenSize(UDim2.new(0, 184, 0, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 0.4, true)
-	LoadButton:TweenSize(UDim2.new(0, 232, 0, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 0.4, true)
-	DetectedGame:TweenSize(UDim2.new(0, 522, 0, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 0.4, true)
-	TopLabel:TweenSize(UDim2.new(0, 591, 0, 0), Enum.EasingDirection.InOut, Enum.EasingStyle.Linear, 0.4, true)
-	wait(0.4)
-	Exit.Visible = false
-	LoadButton.Visible = false
-	DetectedGame.Visible = false
-	TopLabel.Visible = false
-	wait(0.35)
-    	Main:TweenSize(UDim2.new(0, 0,0, 15), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.625, true)
-    	DragIndicator:TweenSize(UDim2.new(0, 0, 0, 10), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.55, true)
-	delay(0.7, function() NEWScriptHub:ClearAllChildren() NEWScriptHub:Destroy() end)
-end
 
 
 --Properties:
@@ -91,6 +75,8 @@ Exit.TextColor3 = Color3.fromRGB(0, 0, 0)
 Exit.TextScaled = true
 Exit.TextSize = 14.000
 Exit.TextWrapped = true
+Exit.MouseButton1Down:Connect(function()
+Parent.Parent.Frame.Visible = true
 
 Shadow.Name = "Shadow"
 Shadow.Parent = Exit
@@ -256,20 +242,7 @@ DetectedGame.TextScaled = true
 DetectedGame.TextSize = 14.000
 DetectedGame.TextWrapped = true
 
--- Opening:
-Main:TweenSize(UDim2.new(0, 596,0, 15), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.625, true)
-wait(0.0078625)
-DragIndicator:TweenSize(UDim2.new(0, 576, 0, 10), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, .55, true)
-wait(0.65)
-Exit.Visible = true
-DetectedGame.Visible = true
-TopLabel.Visible = true
-Main:TweenSize(UDim2.new(0, 592,0, 307), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.8, true)
-Exit:TweenSize(UDim2.new(0, 184, 0, 50), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.85, true)
-LoadButton:TweenSize(UDim2.new(0, 232, 0, 50), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.85, true)
-Executor:TweenSize(UDim2.new(0, 257, 0, 50), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.85, true)
-DetectedGame:TweenSize(UDim2.new(0, 522, 0, 50), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.85, true)
-TopLabel:TweenSize(UDim2.new(0, 591, 0, 42), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.85, true)
+
 
 -- Scripts:
 
