@@ -46,6 +46,7 @@ else
 	print("No Game Detected")	
 end
 
+
 --Properties:
 
 NEWScriptHub.Name = "NEWScriptHub"
@@ -71,9 +72,6 @@ Exit.TextColor3 = Color3.fromRGB(0, 0, 0)
 Exit.TextScaled = true
 Exit.TextSize = 14.000
 Exit.TextWrapped = true
-Exit.MouseButton1Down:Connect(function()
-	delay(0.1, function() Parent.Parent.Frame.Visible = false
-end)
 
 Shadow.Name = "Shadow"
 Shadow.Parent = Exit
@@ -241,7 +239,15 @@ DetectedGame.TextWrapped = true
 
 -- Scripts:
 
-local function GYAMUZ_fake_script() -- Main.Drag 
+local function FAVGA_fake_script() -- Exit.Close 
+	local script = Instance.new('LocalScript', Exit)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(FAVGA_fake_script)()
+local function EFFPUHT_fake_script() -- Main.Drag 
 	local script = Instance.new('LocalScript', Main)
 
 	local UIS = game:GetService("UserInputService")
@@ -282,8 +288,8 @@ local function GYAMUZ_fake_script() -- Main.Drag
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(GYAMUZ_fake_script)()
-local function JLWNT_fake_script() -- DiscordAvatar2.AvatarScrip 
+coroutine.wrap(EFFPUHT_fake_script)()
+local function LMDET_fake_script() -- DiscordAvatar2.AvatarScrip 
 	local script = Instance.new('LocalScript', DiscordAvatar2)
 
 	local Players = game:GetService("Players")
@@ -298,16 +304,16 @@ local function JLWNT_fake_script() -- DiscordAvatar2.AvatarScrip
 	local imageLabel = script.Parent
 	imageLabel.Image = content
 end
-coroutine.wrap(JLWNT_fake_script)()
-local function ZPXY_fake_script() -- Age2.Age 
+coroutine.wrap(LMDET_fake_script)()
+local function AEBTE_fake_script() -- Age2.Age 
 	local script = Instance.new('LocalScript', Age2)
 
 	script.Parent.Text = game.Players.LocalPlayer.AccountAge
 end
-coroutine.wrap(ZPXY_fake_script)()
-local function HMJKMY_fake_script() -- Name.NameScrip 
+coroutine.wrap(AEBTE_fake_script)()
+local function EFXLQ_fake_script() -- Name.NameScrip 
 	local script = Instance.new('LocalScript', Name)
 
 	script.Parent.Text = game.Players.LocalPlayer.Name
 end
-coroutine.wrap(HMJKMY_fake_script)()
+coroutine.wrap(EFXLQ_fake_script)()
