@@ -2,16 +2,26 @@
 
 local NEWScriptHub = Instance.new("ScreenGui")
 local Main = Instance.new("Frame")
-local TopLabel = Instance.new("TextLabel")
-local LoadButton = Instance.new("TextButton")
-local UICorner = Instance.new("UICorner")
-local UICorner_5 = Instance.new("UICorner")
 local Exit = Instance.new("TextButton")
+local Shadow = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
 local UICorner_2 = Instance.new("UICorner")
+local LoadButton = Instance.new("TextButton")
+local Shadow_2 = Instance.new("Frame")
 local UICorner_3 = Instance.new("UICorner")
-local DragIndicator = Instance.new("Frame")
 local UICorner_4 = Instance.new("UICorner")
+local TopLabel = Instance.new("TextLabel")
+local UICorner_5 = Instance.new("UICorner")
+local Desc = Instance.new("TextLabel")
+local DiscordAvatar2 = Instance.new("ImageLabel")
+local UICorner_6 = Instance.new("UICorner")
+local Age = Instance.new("TextLabel")
+local Age2 = Instance.new("TextLabel")
+local Name = Instance.new("TextLabel")
+local Version = Instance.new("TextLabel")
+local DetectedGameText = Instance.new("TextLabel")
 local DetectedGame = Instance.new("TextLabel")
+
 
 
 -- Variables:
@@ -56,45 +66,42 @@ end
 
 --Properties:
 
-NEWScriptHub.Name = "SynHacks Script Loader"
-NEWScriptHub.Parent = game:GetService("CoreGui")
-NEWScriptHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+NEWScriptHub.Name = "NEWScriptHub"
+NEWScriptHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 Main.Name = "Main"
 Main.Parent = NEWScriptHub
-Main.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
-Main.BorderColor3 = Color3.fromRGB(52, 52, 52)
+Main.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
 Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.284, 0,0.237, 0)
-Main.Size = UDim2.new(0, 0, 0, 15)
-Main.Active = true
-Main.Draggable = true
+Main.Position = UDim2.new(0.197320342, 0, 0.062650606, 0)
+Main.Size = UDim2.new(0, 499, 0, 326)
+
 
 TopLabel.Name = "TopLabel"
 TopLabel.Parent = Main
-TopLabel.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
-TopLabel.BackgroundTransparency = 1
-TopLabel.BorderColor3 = Color3.fromRGB(52, 52, 52)
+TopLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TopLabel.BackgroundTransparency = 1.000
 TopLabel.BorderSizePixel = 0
-TopLabel.Position = UDim2.new(0, 0, 0.058631923, 0)
-TopLabel.Size = UDim2.new(0, 591, 0, 0)
-TopLabel.Font = Enum.Font.SourceSans
-TopLabel.Text = "Syn Hax Made by: thedogeus#6969 (I know lua)"
-TopLabel.TextColor3 = Color3.fromRGB(0, 51, 147)
+TopLabel.Position = UDim2.new(0.31556505, 0, 0.0429447889, 0)
+TopLabel.Size = UDim2.new(0, 200, 0, 50)
+TopLabel.Font = Enum.Font.GothamSemibold
+TopLabel.Text = "SyxHax Loader"
+TopLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 TopLabel.TextScaled = true
 TopLabel.TextSize = 28.000
 TopLabel.TextWrapped = true
 TopLabel.Visible = false
 
-LoadButton.Name = "Load SynHax Hub"
+LoadButton.Name = "LoadButton"
 LoadButton.Parent = Main
-LoadButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-LoadButton.BorderColor3 = Color3.fromRGB(53, 53, 53)
-LoadButton.Position = UDim2.new(0.084, 0,0.509, 0)
-LoadButton.Size = UDim2.new(0, 232, 0, 0)
-LoadButton.Font = Enum.Font.SourceSans
-LoadButton.Text = "Load Script"
-LoadButton.TextColor3 = Color3.fromRGB(85, 85, 85)
+LoadButton.BackgroundColor3 = Color3.fromRGB(221, 221, 221)
+LoadButton.BorderSizePixel = 0
+LoadButton.Position = UDim2.new(0.0502078906, 0, 0.788343549, 0)
+LoadButton.Size = UDim2.new(0, 180, 0, 45)
+LoadButton.ZIndex = 2
+LoadButton.Font = Enum.Font.GothamSemibold
+LoadButton.Text = "Load SyxHax"
+LoadButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 LoadButton.TextScaled = true
 LoadButton.TextSize = 14.000
 LoadButton.TextWrapped = true
@@ -103,22 +110,26 @@ LoadButton.MouseButton1Down:Connect(function()
 	CloseHub()
 end)
 
-UICorner.CornerRadius = UDim.new(1, 0)
-UICorner.Parent = LoadButton
+Shadow_2.Name = "Shadow"
+Shadow_2.Parent = LoadButton
+Shadow_2.BackgroundColor3 = Color3.fromRGB(150, 150, 150)
+Shadow_2.BorderSizePixel = 0
+Shadow_2.Size = UDim2.new(1, 0, 1, 4)
 
+UICorner_3.Parent = Shadow_2
 
-UICorner_5.CornerRadius = UDim.new(1, 0)
-UICorner_5.Parent = Executor
+UICorner_4.Parent = LoadButton
 
 Exit.Name = "Exit"
 Exit.Parent = Main
-Exit.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-Exit.BorderColor3 = Color3.fromRGB(53, 53, 53)
-Exit.Position = UDim2.new(0.345365673, 0, 0.755982637, 0)
-Exit.Size = UDim2.new(0, 184, 0, 0)
-Exit.Font = Enum.Font.SourceSans
+Exit.BackgroundColor3 = Color3.fromRGB(221, 221, 221)
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(0.572808921, 0, 0.788343549, 0)
+Exit.Size = UDim2.new(0, 180, 0, 45)
+Exit.ZIndex = 2
+Exit.Font = Enum.Font.GothamSemibold
 Exit.Text = "Exit SynHax"
-Exit.TextColor3 = Color3.fromRGB(85, 85, 85)
+Exit.TextColor3 = Color3.fromRGB(0, 0, 0)
 Exit.TextScaled = true
 Exit.TextSize = 14.000
 Exit.TextWrapped = true
@@ -128,30 +139,35 @@ Exit.MouseButton1Down:Connect(function()
 	CloseHub()
 end)
 
-UICorner_2.CornerRadius = UDim.new(1, 0)
+UICorner.Parent = Shadow
+
 UICorner_2.Parent = Exit
 
-UICorner_3.CornerRadius = UDim.new(0.075000003, 0)
-UICorner_3.Parent = Main
-
-DragIndicator.Name = "Drag Indicator"
-DragIndicator.Parent = Main
-DragIndicator.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-DragIndicator.BorderSizePixel = 0
-DragIndicator.Position = UDim2.new(0, 6, 0.0350000001, 0)
-DragIndicator.Size = UDim2.new(0, 0, 0, 10)
-
-UICorner_4.CornerRadius = UDim.new(1, 0)
-UICorner_4.Parent = DragIndicator
-
-DetectedGame.Name = "Detected Game"
+DetectedGame.Name = "DetectedGame"
 DetectedGame.Parent = Main
-DetectedGame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DetectedGame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 DetectedGame.BackgroundTransparency = 1.000
-DetectedGame.Position = UDim2.new(0.0591216236, 0, 0.237785012, 0)
-DetectedGame.Size = UDim2.new(0, 522, 0, 0)
-DetectedGame.Font = Enum.Font.SourceSans
-DetectedGame.TextColor3 = Color3.fromRGB(85, 85, 85)
+DetectedGame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+DetectedGame.BorderSizePixel = 0
+DetectedGame.Position = UDim2.new(0.117168218, 0, 0.576687098, 0)
+DetectedGame.Size = UDim2.new(0, 200, 0, 50)
+DetectedGame.Font = Enum.Font.GothamSemibold
+DetectedGame.Text = "Game:"
+DetectedGame.TextColor3 = Color3.fromRGB(0, 0, 0)
+DetectedGame.TextScaled = true
+DetectedGame.TextSize = 14.000
+DetectedGame.TextWrapped = true
+
+DetectedGameText.Name = "DetectedGameText"
+DetectedGameText.Parent = Main
+DetectedGameText.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+DetectedGameText.BackgroundTransparency = 1.000
+DetectedGameText.BorderColor3 = Color3.fromRGB(27, 42, 53)
+DetectedGameText.BorderSizePixel = 0
+DetectedGameText.Position = UDim2.new(0.409753382, 0, 0.576687098, 0)
+DetectedGameText.Size = UDim2.new(0, 200, 0, 50)
+DetectedGameText.Font = Enum.Font.GothamSemibold
+DetectedGameText.TextColor3 = Color3.fromRGB(0, 0, 0)
 DetectedGame.TextScaled = true
 DetectedGame.TextSize = 14.000
 DetectedGame.TextWrapped = true
@@ -172,3 +188,77 @@ LoadButton:TweenSize(UDim2.new(0, 232, 0, 50), Enum.EasingDirection.InOut, Enum.
 Executor:TweenSize(UDim2.new(0, 257, 0, 50), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.85, true)
 DetectedGame:TweenSize(UDim2.new(0, 522, 0, 50), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.85, true)
 TopLabel:TweenSize(UDim2.new(0, 591, 0, 42), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.85, true)
+
+-- Scripts:
+
+local function MFBMQ_fake_script() -- Main.Drag 
+	local script = Instance.new('LocalScript', Main)
+
+	local UIS = game:GetService("UserInputService")
+	function dragify(Frame)
+		dragToggle = nil
+		local dragSpeed = 0
+		dragInput = nil
+		dragStart = nil
+		local dragPos = nil
+		function updateInput(input)
+			local Delta = input.Position - dragStart
+			local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+			game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.25), {Position = Position}):Play()
+		end
+		Frame.InputBegan:Connect(function(input)
+			if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+				dragToggle = true
+				dragStart = input.Position
+				startPos = Frame.Position
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragToggle = false
+					end
+				end)
+			end
+		end)
+		Frame.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		game:GetService("UserInputService").InputChanged:Connect(function(input)
+			if input == dragInput and dragToggle then
+				updateInput(input)
+			end
+		end)
+	end
+	
+	dragify(script.Parent)
+end
+coroutine.wrap(MFBMQ_fake_script)()
+local function NUESMON_fake_script() -- DiscordAvatar2.AvatarScrip 
+	local script = Instance.new('LocalScript', DiscordAvatar2)
+
+	local Players = game:GetService("Players")
+	
+	local player = Players.LocalPlayer
+	
+	local userId = player.UserId
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	local imageLabel = script.Parent
+	imageLabel.Image = content
+end
+coroutine.wrap(NUESMON_fake_script)()
+local function XFLU_fake_script() -- Age2.Age 
+	local script = Instance.new('LocalScript', Age2)
+
+	script.Parent.Text = game.Players.LocalPlayer.AccountAge
+end
+coroutine.wrap(XFLU_fake_script)()
+local function PYEGFG_fake_script() -- Name.NameScrip 
+	local script = Instance.new('LocalScript', Name)
+
+	script.Parent.Text = game.Players.LocalPlayer.Name
+end
+coroutine.wrap(PYEGFG_fake_script)()
+
