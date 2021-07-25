@@ -100,7 +100,7 @@ LoadButton.TextScaled = true
 LoadButton.TextSize = 14.000
 LoadButton.TextWrapped = true
 LoadButton.MouseButton1Down:Connect(function()
-	delay(0.1, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/SuperGamingBros4/Roblox-HAX/master/Scripts/"..GameScript))() end)
+	delay(0.1, function() loadstring(game:HttpGet("https://raw.githubusercontent.com/TheSyxScripter/SynHax/main/"..GameScript))() end) end)
 	CloseHub()
 end)
 
