@@ -4,7 +4,7 @@
 
 local K = Window:NewTab("Kits")
 local KSection = K:NewSection("Kit")
- KSection:NewDropdown("Kits", "Choose Any Kit", {"baker", "barbarian", "builder","archer","shielder","melody","davey","farmer_cletus"}, function(v)
+ KSection:NewDropdown("Kits", "Choose Any Kit", {"baker", "barbarian", "builder","archer","shielder","melody","davey","farmer_cletus","bigman"}, function(v)
 local args = {
     [1] = {
         ["kit"] = v
