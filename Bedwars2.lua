@@ -1,5 +1,4 @@
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/rbxhubs/robloxscript/main/script.lua"))()
 local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
 
 local ez = DiscordLib:Window("Bedwars - Manface Clan - https://bit.ly/manfaceclan")
